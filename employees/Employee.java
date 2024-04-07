@@ -1,4 +1,4 @@
-
+package employees;
 
 public class Employee {
     private String fullName;
@@ -17,12 +17,12 @@ public class Employee {
         return salary;
     }
 
-    public void setSalary(double newSalary) {
-        this.salary = newSalary;
+    public void setSalary(double salary) {
+        this.salary = salary;
     }
 
     @Override
     public String toString() {
-        return "Employee: {" + fullName + "}, Salary: {" + salary + "}";
+        return "Employee: " + getName() + ", Salary: " + getSalary();
     }
 }

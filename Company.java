@@ -1,20 +1,18 @@
-public class Company {
+import employees.Employee;
+import employees.Manager;
+import employees.Worker;
 
+public class Company {
     public static void main(String[] args) {
         Employee[] employees = new Employee[5];
-
-        employees[0] = new Employee("Jan Kowalski", 4000);
-        employees[1] = new Employee("Anna Nowicka", 5000);
-        employees[2] = new Employee("Tomasz Zielinski", 6000);
-        employees[3] = new Employee("Kasia Malinowska", 7000);
-        employees[4] = new Employee("Michał Wiśniewski", 8000);
-
-        System.out.println("Dane pracownika o indeksie 3:");
-        System.out.println(employees[3]);
-
-        employees[3].setSalary(9000);
-
-        System.out.println("\nDane wszystkich pracowników:");
+        
+        employees[0] = new Manager("Jan Kowalski", 3000.0, 0);
+        employees[1] = new Worker("Anna Nowak", 3200.0, "Developer");
+        employees[2] = new Employee("Paweł Górski", 2800.0);
+        employees[3] = new Worker("Ewa Malinowska", 3400.0, "Designer");
+        employees[4] = new Worker("Marcin Iksiński", 3100.0, "Tester");
+        
+        
         for (Employee employee : employees) {
             System.out.println(employee);
         }
