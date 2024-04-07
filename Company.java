@@ -14,6 +14,15 @@ public class Company {
         employees[5] = new Manager("Robert Lewandowski", 5000.0, 0);
         employees[6] = new Worker("Zofia Kowalczyk", 3300.0, "Marketing Specialist");
 
+        //wyswietlanie wartosci employe przed podwyzkami
+        for (Employee employee : employees) {
+         System.out.println(employee.toString());
+         
+        }
+
+        System.out.println("Po Podwyżce:--------------------------------");
+        
+
         //podwyzka dla pracownikow
         for (Employee employee : employees) {
             employee.setSalary(employee.getSalary() + 500.0);
